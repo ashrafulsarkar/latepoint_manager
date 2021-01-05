@@ -1,0 +1,16 @@
+.latepoint-top-search-w {
+    visibility: hidden;
+}
+.latepoint-top-new-appointment-btn,
+.latepoint-top-settings-trigger,
+.no-results-w .latepoint-btn {
+    display: none !important;
+}
+.latepoint-all-wrapper .latepoint-top-bar-w .latepoint-top-user-info-w .latepoint-user-info-dropdown ul li:first-child {
+    margin: 0px;
+    border-bottom: 0;
+    display: none;
+}
+.latepoint-side-menu-w.side-menu-full ul.side-menu > li.has-children::after {
+    display: none;
+}
