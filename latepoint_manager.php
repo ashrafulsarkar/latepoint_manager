@@ -32,11 +32,12 @@ if (class_exists('LatePoint')) {
         
         if (get_role("manage_lpoint")) {
             $user = wp_get_current_user();
-            $mlate_admin_url = basename($_SERVER['REQUEST_URI'], '?' . $_SERVER['QUERY_STRING']);
+            $mlate_admin_url = basename(sanitize_text_field($_SERVER['REQUEST_URI']), '?' . sanitize_text_field($_SERVER['QUERY_STRING']));
             if ($user->has_cap('manage_latepoint')) {
                 $mlate_page = $_GET['page'] ?? '';
+                $mlate_page = sanitize_text_field($mlate_page);
                 if ("latepoint" == $mlate_page) {
-                    $mlate_routname = $_GET['route_name'];
+                    $mlate_routname = sanitize_text_field($_GET['route_name']);
                     if ($mlate_page == "latepoint" && $mlate_routname != "bookings__pending_approval") {
                         wp_redirect(admin_url() . "admin.php?page=latepoint&route_name=bookings__pending_approval");
                     }
@@ -102,3 +103,6 @@ if (class_exists('LatePoint')) {
         }
     });    
 }
+
+
+// echo $mlate_admin_url;
