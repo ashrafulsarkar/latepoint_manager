@@ -21,7 +21,7 @@ if (class_exists('LatePoint')) {
     add_action("init", function () {
         add_role(
             "manage_lpoint",
-            __("LatePoint Manager", "latepoint_manager"),
+            esc_html__("LatePoint Manager", "latepoint_manager"),
             array(
                 'manage_options' => true,
                 'read' => true,
@@ -92,7 +92,7 @@ if (class_exists('LatePoint')) {
     //translate admin text
     function mlate_gettext_admin($translated_text, $text_to_translate, $textdomain){
         if ('Administrator' == $text_to_translate) {
-            $translated_text = __('LatePoint Manager', 'latepoint_manager');
+            $translated_text = esc_html__('LatePoint Manager', 'latepoint_manager');
         }
         return $translated_text;
     }
@@ -103,6 +103,3 @@ if (class_exists('LatePoint')) {
         }
     });    
 }
-
-
-// echo $mlate_admin_url;
