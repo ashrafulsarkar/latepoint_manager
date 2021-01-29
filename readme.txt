@@ -24,6 +24,8 @@ Installation procedure:
 4. Go to the "Users"-"LatePoint Manager" menu item and change your WordPress standard roles capabilities according to your needs.
 
 == Changelog ==
-
-= 1.0 =
+= 1.1.0 =
+* Bug fix: After Deactive Latepoint and Latepiont Manager bug fixed.
+* Admin Notice Add
+= 1.0.0 =
 * Initial Release
