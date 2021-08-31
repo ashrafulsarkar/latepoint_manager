@@ -57,8 +57,8 @@ class LatePoint_Manager_Addon_Preload {
         }
         if (!class_exists('LatePoint')) {
             add_action('plugins_loaded', array($this, 'lp_m_latepoint_main_plugin_deactive'));
-            add_action('admin_notices', array($this, 'admin_notices'));
         }
+        add_action('admin_notices', array($this, 'admin_notices'));
         add_action('plugins_loaded', array($this, 'mlate_load_textdomain'));
     }
 
