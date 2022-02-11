@@ -1,0 +1,2 @@
+# LatePoint Manager
+LatePoint Manager is a new role for LatePoint - Appointment Booking & Reservation plugin. This Plugin Assign a new role. LatePoint Manager can control LatePoint plugin 'Pending Approval' page, edit 'Appointments', and after verify, 'Appointments' can be approved.
